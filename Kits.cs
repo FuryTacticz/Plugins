@@ -24,7 +24,6 @@ namespace KitsPlugin
     public class Kits : Plugin
     {
 
-        //Global Vars/Arrays
 
         List<string> PlayersKitActivated = new List<string>();
 
