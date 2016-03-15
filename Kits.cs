@@ -44,13 +44,6 @@ namespace KitsPlugin
             player.SendPlayerInventory();
             SendArmorForPlayer(player);
         }
-        public void OnPlayerDeath(Player player)
-        {
-            if (PlayersKitActivated.Contains(player.Username))
-            {
-                PlayersKitActivated.Remove(player.Username);
-            }
-        }
 
 
         [PacketHandler]
@@ -68,13 +61,6 @@ namespace KitsPlugin
             });
 
             return packet;
-        }
-
-
-        public void OnPlayerLeave(object o, PlayerEventArgs eventArgs)
-        {
-            Player player = eventArgs.Player;
-            PlayersKitActivated.Remove(player.Username);
         }
 
         public void SendArmorForPlayer(Player player)
