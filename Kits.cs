@@ -48,7 +48,10 @@ namespace KitsPlugin
         [PacketHandler]
         public Package McpeLogin(McpeLogin packet, Player player)
         {
-            PlayersKitActivated.Remove(player.Username);
+            if (PlayersKitActivated.Contains(player.Username))
+            {
+                PlayersKitActivated.Remove(player.Username);
+            }
 
             player.SendMessage(string.Format(ChatColors.Yellow + "Welcome " + player.Username), type: MessageType.Chat);
 
