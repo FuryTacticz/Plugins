@@ -64,19 +64,7 @@ namespace KitsPlugin
 
             return packet;
         }
-
-        public void SendArmorForPlayer(Player player)
-        {
-            var armorEquipment = new McpePlayerArmorEquipment();
-            armorEquipment.entityId = player.EntityId;
-            armorEquipment.helmet = player.Inventory.Helmet;
-            armorEquipment.chestplate = player.Inventory.Chest;
-            armorEquipment.leggings = player.Inventory.Leggings;
-            armorEquipment.boots = player.Inventory.Boots;
-            player.Level.RelayBroadcast(armorEquipment);
-        }
-
-
+        
         [Command]
         public void Kit(Player player, string kitName)
         {
