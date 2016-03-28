@@ -1,0 +1,5 @@
+name: Plugin
+main: Plugin.Main
+version: "1.0.0"
+author: Fury
+api: ["1.0.0"]
